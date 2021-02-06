@@ -1,5 +1,6 @@
 Ruby Intro
 =============
+The solution ruby code is in: ```/hw-ruby-intro/lib/ruby_intro.rb```
 
 This 3-part homework gives some basic practice in Ruby as well as
 getting you accustomed to making testing a regular part of your workflow.
