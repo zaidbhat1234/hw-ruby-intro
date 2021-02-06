@@ -4,9 +4,9 @@
 
 def sum arr
   # YOUR CODE HERE
-  s = 0
-  arr.each { |a| s+=a}
-  return s
+  sum = 0
+  arr.each { |a| sum+=a}
+  return sum
 end
 
 def max_2_sum arr
@@ -81,12 +81,14 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  if s.count('01') != s.size or s.size==2 or s.size == 0 
+  #Check if invalid binary number or empty string
+  if s.count('01') != s.size or s.size == 0 
     flag = false
   elsif s.size == 1
     if s == ('0')
       flag = 1
     end
+  #checks if rightmost two bits in binary are 0 then it is divisible by 4
   else
     if s[-1] == ('0') and s[-2]==('0')
       flag = true
@@ -111,6 +113,7 @@ class BookInStock
     "Expected price greater 0 ISBN, got less than") if price <= 0
   end
   
+  #Getters and Setters
   def isbn
     return @isbn
   end
@@ -129,6 +132,7 @@ class BookInStock
   def price_as_string
     num = 0
     p = @price
+    #checks how many decimal places in the number and adds 0's if decimal places less than 2
     while(p != p.to_i)
         num += 1
         p *= 10
@@ -142,6 +146,9 @@ class BookInStock
       s = "$"+price.to_s
     end
     return s
+    
+    #Alternatively can also be done in a single line as :
+    return "$" + sprintf("%.2f", @price)
   end
 # YOUR CODE HERE
 end
