@@ -1,4 +1,4 @@
-# When done, submit this entire file to the autograder.
+# Ruby 2.6.3 version(Default on Cloud9 AWS used)
 
 # Part 1
 
